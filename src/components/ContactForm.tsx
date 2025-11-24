@@ -104,7 +104,7 @@ const ContactForm: React.FC = () => {
                                         required
                                         value={formState.name}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-lg bg-white border border-brand-gray/20 text-brand-black focus:outline-none focus:border-brand-silver focus:ring-1 focus:ring-brand-silver transition-colors"
+                                        className="w-full px-4 py-3 rounded-lg bg-white border border-brand-gray/20 text-black focus:outline-none focus:border-brand-silver focus:ring-1 focus:ring-brand-silver transition-colors"
                                         placeholder="Seu nome"
                                     />
                                 </div>
@@ -117,7 +117,7 @@ const ContactForm: React.FC = () => {
                                         required
                                         value={formState.whatsapp}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 rounded-lg bg-white border border-brand-gray/20 text-brand-black focus:outline-none focus:border-brand-silver focus:ring-1 focus:ring-brand-silver transition-colors"
+                                        className="w-full px-4 py-3 rounded-lg bg-white border border-brand-gray/20 text-black focus:outline-none focus:border-brand-silver focus:ring-1 focus:ring-brand-silver transition-colors"
                                         placeholder="(11) 99999-9999"
                                     />
                                 </div>
@@ -132,7 +132,7 @@ const ContactForm: React.FC = () => {
                                     required
                                     value={formState.email}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg bg-white border border-brand-gray/20 text-brand-black focus:outline-none focus:border-brand-silver focus:ring-1 focus:ring-brand-silver transition-colors"
+                                    className="w-full px-4 py-3 rounded-lg bg-white border border-brand-gray/20 text-black focus:outline-none focus:border-brand-silver focus:ring-1 focus:ring-brand-silver transition-colors"
                                     placeholder="seu@email.com"
                                 />
                             </div>
@@ -145,7 +145,7 @@ const ContactForm: React.FC = () => {
                                     rows={4}
                                     value={formState.observation}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 rounded-lg bg-white border border-brand-gray/20 text-brand-black focus:outline-none focus:border-brand-silver focus:ring-1 focus:ring-brand-silver transition-colors resize-none"
+                                    className="w-full px-4 py-3 rounded-lg bg-white border border-brand-gray/20 text-black focus:outline-none focus:border-brand-silver focus:ring-1 focus:ring-brand-silver transition-colors resize-none"
                                     placeholder="Conte um pouco sobre o momento atual da sua startup ou produto..."
                                 />
                             </div>
