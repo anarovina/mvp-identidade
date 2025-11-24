@@ -26,16 +26,17 @@ const ContactForm: React.FC = () => {
         setError('');
 
         try {
+            // Usamos text/plain e no-cors para evitar preflight OPTIONS que costuma falhar no Apps Script
             await fetch('https://script.google.com/macros/s/AKfycbx4mDP15E6VS8BTAwIUirieUKN-AmDFHJ6hLG3lzoI-dphicagS2yKgKqX7nsQBu1Vjfw/exec', {
                 method: 'POST',
                 mode: 'no-cors',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'text/plain',
                 },
                 body: JSON.stringify(formState)
             });
 
-            // Com mode: 'no-cors', não conseguimos ler a resposta, mas se não der erro, assumimos sucesso
+            // Com no-cors, não temos acesso à resposta, então assumimos sucesso se não lançar erro de rede
             setIsSubmitted(true);
             setFormState({
                 name: '',
