@@ -1,0 +1,32 @@
+
+> landingpage-marca-mvp@0.0.0 build
+> tsc -b && vite build
+
+vite v7.2.4 building client environment for production...
+transforming...
+Error: Cannot apply unknown utility class `bg-brand-black`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive
+    at onInvalidCandidate (/Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu Drive/000-Ana Rovina Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/tailwindcss/dist/lib.js:21:1314)
+    at Te (/Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu Drive/000-Ana Rovina Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/tailwindcss/dist/lib.js:16:36364)
+    at /Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu Drive/000-Ana Rovina Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/tailwindcss/dist/lib.js:21:355
+    at Tr (/Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu Drive/000-Ana Rovina Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/tailwindcss/dist/lib.js:3:1718)
+    at _ (/Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu Drive/000-Ana Rovina Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/tailwindcss/dist/lib.js:3:1377)
+    at Se (/Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu Drive/000-Ana Rovina Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/tailwindcss/dist/lib.js:21:172)
+    at ln (/Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu Drive/000-Ana Rovina Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/tailwindcss/dist/lib.js:38:294)
+    at async sn (/Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu Drive/000-Ana Rovina Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/tailwindcss/dist/lib.js:38:631)
+    at async Qr (/Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu Drive/000-Ana Rovina Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/@tailwindcss/node/dist/index.js:10:3385)
+    at async I (/Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu Drive/000-Ana Rovina Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/@tailwindcss/postcss/dist/index.js:10:3978)
+✓ 3 modules transformed.
+✗ Build failed in 163ms
+error during build:
+[vite:css] [postcss] tailwindcss: /Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu Drive/000-Ana Rovina Studio/APP_Softwares/landingpage_Marca_MVP/src/index.css:1:1: Cannot apply unknown utility class `bg-brand-black`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive
+file: /Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu Drive/000-Ana Rovina Studio/APP_Softwares/landingpage_Marca_MVP/src/index.css:1:0
+    at Input.error (/Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu Drive/000-Ana Rovina Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/postcss/lib/input.js:135:16)
+    at Root.error (/Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu Drive/000-Ana Rovina Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/postcss/lib/node.js:146:32)
+    at Object.Once (/Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu Drive/000-Ana Rovina Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/@tailwindcss/postcss/dist/index.js:10:6912)
+    at async LazyResult.runAsync (/Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu Drive/000-Ana Rovina Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/postcss/lib/lazy-result.js:293:11)
+    at async runPostCSS (file:///Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu%20Drive/000-Ana%20Rovina%20Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/vite/dist/node/chunks/config.js:30793:19)
+    at async compilePostCSS (file:///Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu%20Drive/000-Ana%20Rovina%20Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/vite/dist/node/chunks/config.js:30777:6)
+    at async compileCSS (file:///Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu%20Drive/000-Ana%20Rovina%20Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/vite/dist/node/chunks/config.js:30707:26)
+    at async Object.handler (file:///Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu%20Drive/000-Ana%20Rovina%20Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/vite/dist/node/chunks/config.js:30240:54)
+    at async transform (file:///Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu%20Drive/000-Ana%20Rovina%20Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/rollup/dist/es/shared/node-entry.js:21163:16)
+    at async ModuleLoader.addModuleSource (file:///Users/analuciarovina/Library/CloudStorage/GoogleDrive-analucia.rovina@gmail.com/Meu%20Drive/000-Ana%20Rovina%20Studio/APP_Softwares/landingpage_Marca_MVP/node_modules/rollup/dist/es/shared/node-entry.js:21377:36)
