@@ -10,6 +10,8 @@ const ContactForm: React.FC = () => {
         observation: ''
     });
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [error, setError] = useState('');
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormState({
@@ -18,11 +20,35 @@ const ContactForm: React.FC = () => {
         });
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Here you would typically send the data to a backend
-        console.log('Form submitted:', formState);
-        setIsSubmitted(true);
+        setIsSubmitting(true);
+        setError('');
+
+        try {
+            await fetch('https://script.google.com/macros/s/AKfycbx4mDP15E6VS8BTAwIUirieUKN-AmDFHJ6hLG3lzoI-dphicagS2yKgKqX7nsQBu1Vjfw/exec', {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formState)
+            });
+
+            // Com mode: 'no-cors', não conseguimos ler a resposta, mas se não der erro, assumimos sucesso
+            setIsSubmitted(true);
+            setFormState({
+                name: '',
+                email: '',
+                whatsapp: '',
+                observation: ''
+            });
+        } catch (err) {
+            console.error('Erro ao enviar formulário:', err);
+            setError('Erro ao enviar. Por favor, tente novamente.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -123,11 +149,18 @@ const ContactForm: React.FC = () => {
                                 />
                             </div>
 
+                            {error && (
+                                <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-600 text-sm">
+                                    {error}
+                                </div>
+                            )}
+
                             <button
                                 type="submit"
-                                className="w-full flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold text-brand-black bg-brand-silver rounded-lg hover:bg-[#616668] hover:text-white active:bg-[#616668] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                disabled={isSubmitting}
+                                className="w-full flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold text-brand-black bg-brand-silver rounded-lg hover:bg-[#616668] hover:text-white active:bg-[#616668] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                             >
-                                Agendar Consulta
+                                {isSubmitting ? 'Enviando...' : 'Agendar Consulta'}
                                 <Send className="w-5 h-5" />
                             </button>
                         </form>
