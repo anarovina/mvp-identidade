@@ -45,10 +45,17 @@
 }
 
 body {
-  @apply bg-brand-black text-brand-silver antialiased selection:bg-brand-silver selection:text-brand-black;
+  background-color: var(--color-brand-black);
+  color: var(--color-brand-silver);
+  @apply antialiased;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  
+  &::selection {
+    background-color: var(--color-brand-silver);
+    color: var(--color-brand-black);
+  }
 }
 
 html {
