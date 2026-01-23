@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import anaRovinaImage from '../assets/AnaRovina.jpeg';
 
 const Authority: React.FC = () => {
     return (
@@ -14,7 +15,7 @@ const Authority: React.FC = () => {
                     {/* Placeholder for Ana Rovina's photo */}
                     <div className="absolute inset-0 bg-gradient-to-t from-brand-black/80 to-transparent z-10" />
                     <img
-                        src="/AnaRovina.jpeg"
+                        src={anaRovinaImage}
                         alt="Ana Rovina"
                         className="w-full h-full object-cover"
                     />

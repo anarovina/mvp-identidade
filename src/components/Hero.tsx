@@ -1,13 +1,14 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import backgroundImage from '../assets/background.png';
 
 const Hero: React.FC = () => {
     return (
         <section className="relative flex flex-col items-center justify-center min-h-screen px-6 pt-20 overflow-hidden text-center bg-black">
             <div className="absolute inset-0 z-0">
                 <img
-                    src="/background.png"
+                    src={backgroundImage}
                     alt="Background"
                     className="w-full h-full object-cover opacity-50"
                 />

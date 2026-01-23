@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import logoImage from '../assets/logo_magenta.png';
 
 const Navbar: React.FC = () => {
     return (
@@ -11,7 +12,7 @@ const Navbar: React.FC = () => {
         >
             <div className="flex items-center">
                 <a href="https://www.arovinastudio.com.br/" target="_blank" rel="noopener noreferrer">
-                    <img src="/logo_magenta.png" alt="Arovina Studio" className="h-[35px] md:h-[50px] w-auto object-contain" />
+                    <img src={logoImage} alt="Arovina Studio" className="h-[35px] md:h-[50px] w-auto object-contain" />
                 </a>
             </div>
             <div className="flex items-center gap-6">

@@ -1,5 +1,6 @@
 
 import { Instagram, Linkedin, Mail } from 'lucide-react';
+import logoImage from '../assets/logo_magenta.png';
 
 const Footer: React.FC = () => {
     return (
@@ -7,7 +8,7 @@ const Footer: React.FC = () => {
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
                 <div className="text-center md:text-left">
                     <a href="https://www.arovinastudio.com.br/" target="_blank" rel="noopener noreferrer">
-                        <img src="/logo_magenta.png" alt="Arovina Studio" className="h-[30px] w-auto object-contain mb-2" />
+                        <img src={logoImage} alt="Arovina Studio" className="h-[30px] w-auto object-contain mb-2" />
                     </a>
                     <p className="text-brand-muted text-sm">© 2024. Design for the Future.</p>
                 </div>
